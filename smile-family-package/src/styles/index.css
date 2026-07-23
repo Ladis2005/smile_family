@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #087ea4;
+  --secondary: #23b5c8;
+  --dark: #07364a;
+  --light: #f5fbfd;
+  --white: #ffffff;
+  --muted: #657783;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Compensar cabeçalho fixo ao usar âncoras. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-white font-sans text-dark antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  /* Foco visível e consistente para navegação por teclado. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-secondary ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+      text-sm font-semibold transition-all duration-200
+      focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed
+      disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-brand text-white shadow-card
+      hover:-translate-y-0.5 hover:shadow-glow;
+  }
+
+  .btn-outline {
+    @apply border border-primary/30 bg-white text-primary
+      hover:border-primary hover:bg-light;
+  }
+
+  .btn-ghost {
+    @apply text-dark hover:text-primary;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-muted/25 bg-white px-4 py-2.5 text-sm
+      text-dark transition-colors placeholder:text-muted/60
+      focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/30;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .eyebrow {
+    @apply mb-3 inline-block text-sm font-semibold uppercase tracking-[0.18em]
+      text-secondary;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold text-dark sm:text-4xl md:text-[2.6rem];
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-brand bg-clip-text text-transparent;
+  }
+
+  /* Máscara de esbatimento nas extremidades do carrossel de parceiros. */
+  .fade-edges {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+}
+
+/* Respeitar preferência de movimento reduzido em todo o site. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

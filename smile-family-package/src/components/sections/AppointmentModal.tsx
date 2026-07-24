@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { X, CheckCircle2, Loader2, Info } from 'lucide-react';
+import { X, CheckCircle2, Loader2 } from 'lucide-react';
 import { treatments } from '@/data/treatments';
-import { submitAppointment, isApiConfigured } from '@/services/api';
+import { submitAppointment } from '@/services/api';
 import type { AppointmentFormData } from '@/types';
 
 interface AppointmentModalProps {
@@ -170,18 +170,6 @@ export function AppointmentModal({ open, onClose }: AppointmentModalProps) {
                   Preencha os seus dados e entraremos em contacto para
                   confirmar.
                 </p>
-
-                {!isApiConfigured && (
-                  <div className="mt-4 flex items-start gap-2 rounded-xl bg-light p-3 text-xs text-muted">
-                    <Info className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
-                    <span>
-                      Modo demonstrativo: a integração com o sistema será feita
-                      em{' '}
-                      <code className="text-primary">src/services/api.ts</code>{' '}
-                      (VITE_API_BASE_URL).
-                    </span>
-                  </div>
-                )}
 
                 <form
                   onSubmit={handleSubmit}

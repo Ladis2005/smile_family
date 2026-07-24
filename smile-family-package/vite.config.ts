@@ -11,14 +11,10 @@ export default defineConfig({
     },
   },
   build: {
-    // Split the heavy 3D libraries into their own chunk so the initial
-    // bundle stays small and the hero can lazy-load them on demand.
     rollupOptions: {
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('three')) return 'three';
-            if (id.includes('@react-three')) return 'r3f';
             if (id.includes('framer-motion')) return 'motion';
           }
           return undefined;

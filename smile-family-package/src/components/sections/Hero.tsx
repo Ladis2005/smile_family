@@ -6,7 +6,6 @@ import {
   Cpu,
   Award,
 } from 'lucide-react';
-import { Hero3D } from '@/components/three/Hero3D';
 import { scrollToId } from '@/components/layout/scrollToId';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
@@ -101,9 +100,17 @@ export function Hero({ onBook }: HeroProps) {
           </motion.div>
         </div>
 
-        {/* Elemento 3D + etiquetas */}
+        {/* Ilustração + etiquetas */}
         <div className="relative mx-auto h-[340px] w-full max-w-lg sm:h-[440px] lg:h-[520px]">
-          <Hero3D />
+          <div className="flex h-full w-full items-center justify-center">
+            <img
+              src="/images/hero-icon.png"
+              alt="Ilustração da Smile Family"
+              className={`h-64 w-64 drop-shadow-[0_20px_40px_rgba(8,54,74,0.25)] sm:h-80 sm:w-80 ${
+                reduced ? '' : 'animate-float'
+              }`}
+            />
+          </div>
 
           {floatingLabels.map((label, i) => {
             const Icon = label.icon;

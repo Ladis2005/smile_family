@@ -10,31 +10,31 @@ import type { GalleryItem } from '@/types';
 export const gallery: GalleryItem[] = [
   {
     id: 'recepcao',
-    // src: '/images/gallery/recepcao.jpg',
+    src: '/images/clinica-recepcao.jpg',
     alt: 'Receção da clínica Smile Family',
     caption: 'Receção',
   },
   {
     id: 'consultorio',
-    // src: '/images/gallery/consultorio.jpg',
+    src: '/images/gallery/consultorio.jpg',
     alt: 'Consultório equipado da Smile Family',
     caption: 'Consultório',
   },
   {
     id: 'equipamentos',
-    // src: '/images/gallery/equipamentos.jpg',
+    src: '/images/gallery/equipamentos.jpg',
     alt: 'Equipamentos odontológicos modernos',
     caption: 'Equipamentos',
   },
   {
     id: 'equipa',
-    // src: '/images/gallery/equipa.jpg',
+    src: '/images/gallery/equipa.jpg',
     alt: 'Equipa de profissionais da Smile Family',
     caption: 'Equipa',
   },
   {
     id: 'atendimento',
-    // src: '/images/gallery/atendimento.jpg',
+    src: '/images/gallery/atendimento.jpg',
     alt: 'Atendimento a um paciente na Smile Family',
     caption: 'Atendimento',
   },
@@ -43,5 +43,11 @@ export const gallery: GalleryItem[] = [
     // src: '/images/gallery/ambiente.jpg',
     alt: 'Ambiente interno confortável da clínica',
     caption: 'Ambiente interno',
+  },
+  {
+    id: 'certificacoes',
+    src: '/images/gallery/certificacoes.jpg',
+    alt: 'Certificações e formações da equipa Smile Family',
+    caption: 'Certificações',
   },
 ];

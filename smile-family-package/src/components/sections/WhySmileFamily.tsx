@@ -66,17 +66,12 @@ export function WhySmileFamily() {
         {/* Composição visual (foto + elemento 3D discreto) */}
         <Reveal delay={0.1} className="relative">
           <div className="relative mx-auto max-w-md">
-            {/* Placeholder de fotografia da clínica */}
-            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-brand shadow-soft">
-              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary/90 to-secondary/90 text-center text-white/90">
-                <span className="px-8 text-sm">
-                  Fotografia da clínica
-                  <br />
-                  <span className="text-white/60">
-                    (substituir por imagem real)
-                  </span>
-                </span>
-              </div>
+            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft">
+              <img
+                src="/images/clinica-recepcao.jpg"
+                alt="Receção da clínica Smile Family"
+                className="h-full w-full object-cover"
+              />
             </div>
 
             {/* Cartão flutuante discreto */}

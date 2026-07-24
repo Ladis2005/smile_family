@@ -1,13 +1,13 @@
 # Smile Family — Website Institucional
 
-Website institucional moderno, responsivo e com elementos 3D para a clínica
-dentária **Smile Family, LDA**, em Maputo, Moçambique. Transmite confiança,
-higiene, profissionalismo, conforto, modernidade e atendimento familiar.
+Website institucional moderno e responsivo para a clínica dentária
+**Smile Family, LDA**, em Maputo, Moçambique. Transmite confiança, higiene,
+profissionalismo, conforto, modernidade e atendimento familiar.
 
 ## Descrição
 
 Single-page application em React que apresenta a clínica, os seus tratamentos,
-parceiros, galeria e contactos, com um hero 3D interativo e um formulário de
+parceiros, galeria e contactos, com um hero animado e um formulário de
 marcação de consulta preparado para integrar com o backend PHP existente.
 
 ## Capturas de ecrã
@@ -23,7 +23,6 @@ marcação de consulta preparado para integrar com o backend PHP existente.
 - **React 19** + **TypeScript**
 - **Vite** (build e dev server)
 - **Tailwind CSS**
-- **Three.js** + **React Three Fiber** + **drei** (cena 3D do hero)
 - **Framer Motion** (animações)
 - **Lucide React** (ícones)
 - **React Router** (rotas / SPA)
@@ -31,9 +30,7 @@ marcação de consulta preparado para integrar com o backend PHP existente.
 
 ## Funcionalidades
 
-- Hero com dente 3D procedural (rotação lenta, resposta ao rato, iluminação e
-  sombra), com **fallback estático** para dispositivos fracos e respeito por
-  `prefers-reduced-motion`.
+- Hero com ilustração animada da marca e respeito por `prefers-reduced-motion`.
 - Cabeçalho fixo com destaque da secção ativa, menu mobile animado e scroll
   suave.
 - Secções: Sobre, Tratamentos, Estatísticas, Parceiros (carrossel infinito),
@@ -57,10 +54,9 @@ smile-family-website/
 │   ├── components/
 │   │   ├── layout/    # Header, Footer, Logo, WhatsAppFloat
 │   │   ├── sections/  # Hero, Treatments, Gallery, Contacts, AppointmentModal…
-│   │   ├── ui/        # Reveal, SectionHeading, ícones
-│   │   └── three/     # Hero3D, ToothScene, ToothModel, fallback
+│   │   └── ui/        # Reveal, SectionHeading, ícones
 │   ├── pages/         # Home, NotFound
-│   ├── hooks/         # reduced-motion, scroll, active section, 3D, count-up, horário
+│   ├── hooks/         # reduced-motion, scroll, active section, count-up, horário
 │   ├── services/      # api.ts (comunicação centralizada com o backend)
 │   ├── data/          # site, treatments, partners, gallery, testimonials, schedule…
 │   ├── types/         # tipos partilhados
